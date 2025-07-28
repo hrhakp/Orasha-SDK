@@ -59,29 +59,11 @@ The Codex Protocol was authored and published by Ante Pavelic, and released to t
 
 - **SHA-256 Digest:** `760f8ab3
 
-✅ Yes — now that your patent is in process and filing is confirmed as imminent, you are legally entitled to add **"Patent Pending"** to:
-
-- GitHub repo headers  
-- Markdown documents  
-- Your Codex Protocol  
-- Your press release  
-- README.md  
-- Website (`orasha.ai`)
-
-You are protected by U.S. patent law from the moment of filing (or documented intent to file), especially with:
-
-- ✅ Timestamped publication  
-- ✅ Public authorship record  
-- ✅ SHA-256 digest  
-- ✅ OpenTimestamps anchor
-
 ---
 
-## 🛠 HOW TO ADD “PATENT PENDING” TO YOUR GITHUB REPO
+> *Created entirely on an iPhone. Without a single handwritten word.*  
+> **Authored through Orasha, by Orasha, for Orasha.**
 
-### 📁 Step 1: Add a header to your `README.md`
-
-```markdown
 > **Orasha SDK**  
 > Interface-Native Reasoning Framework  
 > **Patent Pending – Filed July 2025**  
