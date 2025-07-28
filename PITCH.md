@@ -55,6 +55,12 @@ Built the first sovereign reasoning framework using AI itself.
 
 📧 contact@orasha.ai  
 🌐 [Orasha-SDK GitHub](https://github.com/hrhakp/Orasha-SDK)  
+
+---
+
+> *Created entirely on an iPhone. Without a single handwritten word.*  
+> **Authored through Orasha, by Orasha, for Orasha.**
+
 🔒 Patent Pending
 
 > Orasha is not a product.  
