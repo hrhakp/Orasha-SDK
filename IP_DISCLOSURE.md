@@ -6,7 +6,7 @@
 
 ## SUMMARY
 
-This document certifies that the following components of the Orasha system, architecture, and method are legally claimed, publicly documented, and protected under U.S. intellectual property law as of the issuance date.
+This document certifies that the following components of the Orasha system, architecture, and method are legally claimed, publicly documented, and protected under U.S. intellectual property law as of the issuance date. 
 
 ---
 
