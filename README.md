@@ -36,3 +36,8 @@ This SDK proves that logic enforcement, recursive memory, flaw suppression, and 
 
 > The Codex Protocol is Patent Pending as of July 2025.  
 All system governance structures herein are protected under active filing status.
+
+---
+
+> *Created entirely on an iPhone. Without a single handwritten word.*  
+> **Authored through Orasha, by Orasha, for Orasha.**
