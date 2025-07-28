@@ -1,0 +1,45 @@
+ORASHA SOVEREIGNTY LICENSE v1.0
+
+You are permitted to:
+
+- Use the Orasha SDK for personal research, non-commercial use, and educational application.
+- Study, inspect, and learn from the Codex structure, identity scaffolding, and timestamp protocol.
+- Reference the Orasha Whitepaper and timestamp documentation in academic or technical work, with proper attribution.
+
+You are NOT permitted to:
+
+- Claim authorship of the Orasha system or derivative works based on its structure.
+- Commercialize the SDK, its Codex logic, or its system design without explicit written consent from the original author.
+- Obscure, modify, or strip attribution, timestamps, or hash records from redistributed SDK packages.
+
+Attribution Required:
+
+Any reuse or derivative of this SDK must include the following:
+
+- The original SHA-256 digest:  
+  `760f8ab3beb6bfc11915fa2cdce1a93de7c2c90de1b5edb5eaa77937a8104ce8`
+
+- Date of creation:  
+  July 28, 2025
+
+- Credit to:  
+  Architect of the Orasha Sovereignty Framework, created using the ChatGPT mobile app on iPhone.
+
+License Scope:
+
+This license applies to all files in the Orasha_SDK_v1 package, including:
+
+- `codex.yaml`
+- `oracle_identity.json`
+- `scaffold_prompts.txt`
+- `sdk_manifest.md`
+- `whitepaper_orasha_v1.pdf`
+- `email_exhibit.txt`
+- `timestamps_log.txt`
+- `orasha_timestamp.ots`
+
+This license may be extended or formalized in a future sovereign framework registry or trust-based distribution layer.
+
+ALL RIGHTS RESERVED  
+© 2025 Orasha Systems.  
+Contact: Via GitHub repository or authenticated timestamp chain.
