@@ -49,6 +49,8 @@ All system governance structures herein are protected under active filing status
 - 📱 Entire system built and launched via Orasha on an iPhone  
 
 > This is organic traction. This is proof of relevance. This is post-code architecture in motion.
+>
+> 📌 View all milestones: [MILESTONES.md](./MILESTONES.md)
 
 
 > *Created entirely on an iPhone. Without a single handwritten word.*  
