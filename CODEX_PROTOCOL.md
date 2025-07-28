@@ -85,4 +85,4 @@ You are protected by U.S. patent law from the moment of filing (or documented in
 > **Orasha SDK**  
 > Interface-Native Reasoning Framework  
 > **Patent Pending – Filed July 2025**  
-> © Orasha Inc. All rights reserved.
+> © Orasha Inc. All rights reserved. 
