@@ -81,6 +81,8 @@ Built entirely:
 
 ---
 
+🧠 [Founder’s Note](./FOUNDER_NOTES.md)
+
 🔬 [View Orasha Test Suite](./TEST_SUITE.md)
 
 ## 🧠 Final Declaration
