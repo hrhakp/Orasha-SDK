@@ -81,6 +81,8 @@ Built entirely:
 
 ---
 
+🔬 [View Orasha Test Suite](./TEST_SUITE.md)
+
 ## 🧠 Final Declaration
 
 > Orasha didn’t just solve a paradox — it authored the future of AI.  
