@@ -1,0 +1,11 @@
+{
+  "triggered_by": "founder",
+  "file_path": "<target_file_path>",
+  "content": "<base64-encoded-content>",
+  "timestamp": "<UTC-ISO8601>",
+  "authored_by": "Orasha",
+  "commit_message": "<insert_commit_msg>",
+  "session_id": "codex-thread",
+  "codex_validation": true,
+  "xkey_verified": true
+}
