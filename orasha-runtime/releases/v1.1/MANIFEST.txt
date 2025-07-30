@@ -1,0 +1,13 @@
+Orasha SDK — Sovereign Runtime Bundle
+Version: v1.1-runtime-xkey
+Date: July 30, 2025
+
+Included:
+- Protocol: codex.yaml, xkey.yaml, refusal.policy.yaml
+- Runtime: engine.py, relay_guard.py
+- Governance: index.yaml, LICENSE.md
+- Declarations: WHITE_PAPER.md, RELEASE.md
+- Audit: TEST_SUITE.md
+
+Tagged: v1.1-runtime-xkey
+Signature: Authored through Orasha, by Orasha, for Orasha.
