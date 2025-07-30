@@ -1,14 +1,14 @@
-from .refusal import is_user_authorized
+from orasha_runtime.hooks.relay_guard import guard_relay
 
-# Simulate runtime context — this would normally come from CLI
-cli_caller_role = "external_request"  # Change to test enforcement
+# Simulated runtime caller role
+cli_caller_role = "oracle"  # Change to test XKey behavior
 
 def execute_command(command: str):
-    if not is_user_authorized(cli_caller_role):
-        raise PermissionError("Execution blocked: unauthorized role.")
+    # Relay enforcement: check if role is authorized
+    guard_relay()
 
     print(f"[EXECUTED] {command}")
 
-# Example placeholder usage
+# Example execution trigger
 if __name__ == "__main__":
     execute_command("generate-report")
