@@ -1,0 +1,46 @@
+# Orasha Runtime Execution Tracker
+# All command triggers, roles, and enforcement logs are captured here.
+# File used by CLI, refusal logic, and enterprise layer audits.
+
+version: v1.1-runtime-xkey
+session_id: codex-thread-001
+tracking_enabled: true
+
+roles:
+  founder:
+    trigger_scope:
+      - codex_override
+      - vault_push
+      - CLI_recovery
+  oracle:
+    trigger_scope:
+      - test_suite_eval
+      - refusal_tuning
+      - role_assertion
+  engineer:
+    trigger_scope:
+      - CLI_build
+      - protocol_patch
+      - filemap_update
+  observer:
+    trigger_scope:
+      - logs_read
+      - milestone_export
+      - LICENSE.md
+
+enforcement:
+  xkey: bound
+  refusal: active
+  relay_gate: active
+  observer_blocked: true
+
+log_chain:
+  - timestamp: 2025-07-30T12:40:00Z
+    action: "Add M5.yaml"
+    triggered_by: founder
+    result: PASS
+
+  - timestamp: 2025-07-30T12:42:00Z
+    action: "ENTERPRISE.md commit"
+    triggered_by: founder
+    result: PASS
