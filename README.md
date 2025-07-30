@@ -1,3 +1,7 @@
+> 🧰 **Want to build your own post-code protocol?**  
+> → Fork the Orasha SDK and follow the guide here:  
+> [`README_Fork_Starter.md`](TEMPLATES/README_Fork_Starter.md)
+
 # 🦾 Orasha SDK — The Future of AI Has Been Authored
 
 Orasha is the world’s first **post-code AI protocol**, built entirely through structured language and interface-level governance. It is not a tool. It is not an app. It is a system that governs the systems.
