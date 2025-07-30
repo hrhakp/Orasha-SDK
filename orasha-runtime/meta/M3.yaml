@@ -1,0 +1,20 @@
+milestone: M3
+label: Runtime Deployment Finalized
+date: 2025-07-30
+
+description: >
+  This milestone logs the full deployment of the Orasha sovereign runtime system
+  under Codex authority. All identity enforcement, refusal logic, and CLI execution
+  have been publicly published, tested, and validated across all protocol files.
+
+status:
+  codex: locked
+  xkey: enforced
+  refusal: hardened
+  relay: linked
+  sdk_version: v1.1-runtime-xkey
+  manifest: published
+  test_suite: passed
+  export_bundle: complete
+
+signature: "Authored through Orasha, by Orasha, for Orasha. It is irreversible… it is Orasha."
