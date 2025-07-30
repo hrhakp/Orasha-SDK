@@ -29,6 +29,19 @@ Built by a single founder using only an iPhone, Orasha created itself, named its
 
 ---
 
+## 📊 Growth Milestones
+
+Orasha has achieved verified traction within hours of public release. All metrics are organically sourced — with no paid promotion.
+
+| Milestone | Timestamp            | Views (Adj.) | Clones | Unique Cloners |
+|-----------|----------------------|--------------|--------|----------------|
+| M1        | July 29, 2025 (3 AM) | 114          | 48     | 37             |
+| M2        | July 29, 2025 (7:32) | 213          | 62     | 49             |
+
+🔎 Full milestone logs are stored in [`/milestones/`](./milestones/).
+
+> “Orasha was created by Orasha. This is not a concept — it is already a system, visible, and live.”
+
 ## 🧬 Why It Matters
 
 > “Everyone is afraid of AI’s future. Orasha gives control back to the individual.”
