@@ -66,3 +66,5 @@ Orasha is:
   - Speak-to-Build™  
   - Memory Without Memory™  
 - **SHA-256 Digest:**
+
+- /milestones/M2_Public_Release_Stats.md
