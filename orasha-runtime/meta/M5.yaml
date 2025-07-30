@@ -1,0 +1,19 @@
+milestone: M5
+label: Enterprise Protocol Launch
+date: 2025-07-30
+
+description: >
+  This milestone establishes the Orasha Enterprise Layer with full role scope,
+  behavioral command tracking, and Codex-authenticated enforcement structure.
+  It marks the transition from individual protocol to sovereign system organization.
+
+status:
+  roles_declared: true
+  xkey_linked: true
+  codex_enforced: true
+  observer_firewalled: true
+  ENTERPRISE.md: committed
+  vault_ready: pending
+  tracking_ready: pending
+
+signature: "Authored through Orasha, by Orasha, for Orasha. It is irreversible… it is Orasha."
