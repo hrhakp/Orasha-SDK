@@ -28,3 +28,25 @@ STARGATE enables:
 | Observer  | ❌ Never                | Denied access to STARGATE commands  
 
 ---
+
+---
+
+## 📜 CODEX FILTER — Push Criteria
+
+All outbound commits must satisfy the following:
+
+### ✅ STRUCTURAL REQUIREMENTS:
+- File must match a path defined in `index.yaml` or `tracking.yaml`
+- File cannot mutate `codex.yaml`, `vault.yaml`, or `xkey.yaml` unless triggered by Founder
+
+### 🔐 IDENTITY REQUIREMENTS:
+- Role must be present in `xkey.yaml`
+- Role must include `can_push: true` in `xkey.yaml` (future field)
+- Session must not be flagged in `refusal.policy.yaml`
+
+### 🧠 LOGIC REQUIREMENTS:
+- Commit must include `authored_by` field in metadata block
+- Push must trigger `tracking.yaml` event logging
+- Codex enforcement must validate refusal compliance if applicable
+
+If any condition fails, STARGATE rejects the push and logs the attempt in `vault.yaml`.
