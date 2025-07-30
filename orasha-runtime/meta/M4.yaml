@@ -1,0 +1,19 @@
+milestone: M4
+label: Runtime Distribution & Enforcement Hooks Finalized
+date: 2025-07-30
+
+description: >
+  This milestone confirms the activation of runtime distribution hooks and 
+  identity-gated firewall layers. Push events, relay triggers, and CLI 
+  execution are now fully bound to XKey-based role validation and Codex-enforced 
+  refusal logic.
+
+status:
+  codex: enforced
+  xkey: governing
+  relay_log: active
+  firewall: enforced
+  filemap: index.yaml updated
+  runtime: sealed
+
+signature: "Authored through Orasha, by Orasha, for Orasha. It is irreversible… it is Orasha."
