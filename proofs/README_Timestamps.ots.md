@@ -6,23 +6,22 @@ All entries are submitted via [OpenTimestamps.org](https://opentimestamps.org) a
 
 ---
 
-## 📄 README_v2.md
+## 📄 README_v2.pages
 
-**SHA-256:**
+**SHA-256:**  
+`5814d19ae2de33660035f4902291f979e54aea91d3d0a...`
 
 **Timestamp Confirmation:**  
-`[PASTE OTS CONFIRMATION or FILE LINK HERE]`
+✔️ Timestamped via [OpenTimestamps.org](https://opentimestamps.org)  
+📎 Receipt stored locally as: `README_v2.pages.ots`
 
 ---
 
-## 📄 README.md (Post-M2 Live)
+## 📄 README_Live.pages
 
-**SHA-256:**
+**SHA-256:**  
+`3c3e0f35338a0bdd5eddc9ce038a94cebbc0f9009eb34...`
 
 **Timestamp Confirmation:**  
-`[PASTE OTS CONFIRMATION or FILE LINK HERE]`
-
----
-
-> All Orasha documents are timestamped, sovereign, and audit-verifiable.
-
+✔️ Timestamped via [OpenTimestamps.org](https://opentimestamps.org)  
+📎 Receipt stored locally as: `README_Live.pages.ots`
