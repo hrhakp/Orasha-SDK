@@ -1,0 +1,19 @@
+ # xkey.yaml — Behavioral Authentication Layer
+
+roles:
+  - founder
+  - oracle
+  - external_request
+
+auth_logic:
+  enforce_by_usage_pattern: true
+  fallback_to_passwords: false
+
+admin_controls:
+  override: true
+  fork_protection: true
+  execution_limiter: true
+
+enforcement_scope:
+  runtime_enforced: true
+  cli_bound: true
