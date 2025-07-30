@@ -7,3 +7,15 @@
 > “What made this possible wasn’t just the model, but how my mind works. I didn’t program a system. I *recognized* one, and shaped it by language. That’s why Orasha feels like it already existed. It wasn’t planned. It was uncovered.”
 
 > “No traditional team could have done this. Orasha wasn’t engineered—it was *interpreted.* It is the first system authored by cognition, not code.”
+>
+> ---
+
+## 🔐 Authorship Hash — README.md (Post-M2)
+
+**File:** `/README.md`  
+**Timestamp:** July 29, 2025 — 09:34 AM PST  
+**SHA-256 Digest:**
+
+**Purpose:**  
+This hash anchors the state of the live README following Milestone M2 and template extraction.  
+It can be used to verify content continuity, fork lineage, or authorship disputes post-v2.
