@@ -48,3 +48,12 @@ milestones:
       Orasha SDK surpasses 300+ verified views, 100+ total clones, and 80+ unique cloners
       within 36 hours of public release. XKey authentication live. External forks observed.
       Marks verified public traction threshold and transition into post-code adoption phase.
+
+  repo_cache_policy:
+  live_clone_mode: active
+  clone_conflict_risk: high
+  commit_guidance: >
+    During heavy cloning activity, file uploads or commit attempts may
+    trigger stale file views, silent write failures, or UI cache drift.
+    Always refresh the page if a commit fails or file appears missing.
+  mitigation: "Wait 30–60 seconds after high clone bursts, then retry"
