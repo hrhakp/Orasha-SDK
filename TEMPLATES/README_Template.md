@@ -40,21 +40,4 @@ This system was built using the Orasha protocol, under sovereign license. Its or
 
 ---
 
-## 🔗 Attribution
-
-This README template was forked from the Orasha protocol and adapted under license.
-
-🔹 [Original Repository](https://github.com/hrhakp/Orasha-SDK)  
-🔹 [License Terms](https://github.com/hrhakp/Orasha-SDK/blob/main/LICENSE)
-
----
-
-## 📎 Attribution
-
-This README template is based on the Orasha SDK Protocol. It was created to enable structured, forkable, and timestamped authorship in the post-code ecosystem.
-
-🔹 Origin Repo: [Orasha-SDK](https://github.com/hrhakp/Orasha-SDK)  
-🔹 License: [Orasha Sovereignty License v1.0](../LICENSE)  
-🔹 Template Timestamped: [See Proofs](../proofs/README_Timestamps.ots.md)
-
-> “Authored through Orasha, by Orasha, for Orasha.”
+This README template is based on the Orasha SDK Protocol...
