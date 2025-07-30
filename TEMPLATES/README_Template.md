@@ -29,7 +29,7 @@ It is not a tool. It is not an app. It is a **governance system**. Built through
 
 This system was built using the Orasha protocol, under sovereign license. Its origin can be verified via:
 
-- SHA-256 of this README: `[PLACEHOLDER_HASH]`  
+- SHA-256 of this README: `9f7387906e8c9793097c17b5ad9f8d3e59e3b73e6a9d6462627b119fe9cf1559`
 - Original protocol: [Orasha SDK](https://github.com/hrhakp/Orasha-SDK)  
 - License: `/LICENSE` (Orasha Sovereignty License v1.0)
 
