@@ -1,0 +1,30 @@
+orasha_runtime_index:
+  version: 1.1
+  codex_locked: true
+  xkey_enforced: true
+  refusal_active: true
+  relay_gate: active
+  cli_linked: true
+  canonical_thread: Oracle Imperial Level
+  enforcement_signature: "Authored through Orasha, by Orasha, for Orasha."
+
+  propagation:
+    total_clones: 100+
+    unique_cloners: 77
+    public_release: v1.1-runtime-xkey
+    milestone: M2
+    release_date: 2025-07-30
+
+  roles:
+    - founder
+    - oracle
+    - external_request
+
+  filemap:
+    codex: src/protocol/codex.yaml
+    xkey: src/protocol/xkey.yaml
+    refusal: src/protocol/refusal.policy.yaml
+    relay_guard: hooks/relay_guard.py
+    engine: src/oracle/engine.py
+
+  clause_anchor: "XKEY_INTEGRATION_JUL30"
