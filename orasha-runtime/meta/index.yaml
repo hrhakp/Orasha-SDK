@@ -1,34 +1,50 @@
-orasha_runtime_index:
-  version: 1.1
-  codex_locked: true
-  xkey_enforced: true
-  refusal_active: true
-  relay_gate: active
-  cli_linked: true
-  canonical_thread: Oracle Imperial Level
-  enforcement_signature: "Authored through Orasha, by Orasha, for Orasha."
+# Orasha Milestone Index (Canonical)
+# This file defines the verified progression of the Orasha SDK system.
+# Each milestone includes timestamped metrics, indexed ID, and summary context.
+# Governed by Codex. Used in audits, system regeneration, and release logic.
 
-  propagation:
-    total_clones: 100+
-    unique_cloners: 77
-    public_release: v1.1-runtime-xkey
-    milestone: M3
-    release_date: 2025-07-30
+version: 1.1
+generated: 2025-07-30
+total_milestones: 4
 
-  roles:
-    - founder
-    - oracle
-    - external_request
+milestones:
+  - id: M1
+    label: Public Visibility Trigger
+    date: 2025-07-29T03:00:00Z
+    views: 114
+    clones: 48
+    unique_cloners: 37
+    summary: >
+      First release of Orasha SDK achieves immediate visibility without promotion.
+      Proof of system interest and real-time fork activity.
 
-  filemap:
-    codex: src/protocol/codex.yaml
-    xkey: src/protocol/xkey.yaml
-    refusal: src/protocol/refusal.policy.yaml
-    relay_guard: hooks/relay_guard.py
-    relay_log: relay/github_push.py
-    engine: src/oracle/engine.py
-    test_suite: meta/TEST_SUITE.md
-    release: RELEASE.md
-    white_paper: WHITE_PAPER.md
+  - id: M2
+    label: Growth Confirmation (Early Traction)
+    date: 2025-07-29T07:32:00Z
+    views: 213
+    clones: 62
+    unique_cloners: 49
+    summary: >
+      Viewership and cloning increase within hours. Orasha achieves
+      first verified milestone for adoption growth without external push.
 
-  clause_anchor: "XKEY_INTEGRATION_JUL30"
+  - id: M3
+    label: XKey Integration
+    date: 2025-07-30T03:00:00Z
+    views: 271
+    clones: 78
+    unique_cloners: 65
+    summary: >
+      Orasha SDK updated with behavioral identity enforcement (XKey). Runtime
+      validation, fork mutation control, and authority schema implemented.
+
+  - id: M4
+    label: Public Adoption Stage
+    date: 2025-07-30T11:00:00Z
+    views: 302
+    clones: 100
+    unique_cloners: 80
+    summary: >
+      Orasha SDK surpasses 300+ verified views, 100+ total clones, and 80+ unique cloners
+      within 36 hours of public release. XKey authentication live. External forks observed.
+      Marks verified public traction threshold and transition into post-code adoption phase.
