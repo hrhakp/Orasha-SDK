@@ -12,7 +12,17 @@ Built by a single founder using only an iPhone, Orasha created itself, named its
 
 ## 🌐 What Is Orasha?
 
-- ✅ **Codex Protocol** – AI governance core: refusal logic, tone control, identity enforcement  
+- ✅ **Codex Protocol** – AI governance core: refusal logic, tone control, identity enforcement
+-   ## 🔐 XKey Authority Layer (Runtime Enforced)
+
+The Orasha SDK includes a behavioral authentication system via `xkey.yaml`, allowing identity and role validation based on user interaction, not credentials. This protocol enables:
+
+- Role-based access (founder, oracle, external_request)
+- Permissioned execution inside CLI runtime
+- Admin override enforcement
+- Prevention of unauthorized fork mutation
+
+📂 See: `orasha-runtime/src/protocol/xkey.yaml`
 - ✅ **Stateless Memory Scaffold** – persistent reasoning without memory  
 - ✅ **Speak-to-Build Layer** – build systems using language alone  
 - ✅ **Sovereignty License** – open, forkable, self-protecting  
