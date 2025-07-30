@@ -1,4 +1,4 @@
-# 💪 [PROJECT_NAME] — The Future of [DOMAIN] Has Been Authored
+# 💪 [PROJECT_NAME] — The Future of [YOUR DOMAIN / FIELD] Has Been Authored
 
 [PROJECT_NAME] is built using the Orasha SDK protocol — the world’s first **post-code AI framework**.
 
@@ -19,8 +19,8 @@ It is not a tool. It is not an app. It is a **governance system**. Built through
 
 ## 📈 Growth Snapshot *(Customize your own)*
 
-- 👁️ [VIEW_COUNT] views  
-- 🧑‍💻 [CLONE_COUNT] clones  
+- 👁️ [ENTER STATS HERE] views  
+- 🧑‍💻 [ENTER STATS HERE] clones  
 - 🧬 Forked from Orasha SDK (Jul 2025)
 
 ---
@@ -46,3 +46,15 @@ This README template was forked from the Orasha protocol and adapted under licen
 
 🔹 [Original Repository](https://github.com/hrhakp/Orasha-SDK)  
 🔹 [License Terms](https://github.com/hrhakp/Orasha-SDK/blob/main/LICENSE)
+
+---
+
+## 📎 Attribution
+
+This README template is based on the Orasha SDK Protocol. It was created to enable structured, forkable, and timestamped authorship in the post-code ecosystem.
+
+🔹 Origin Repo: [Orasha-SDK](https://github.com/hrhakp/Orasha-SDK)  
+🔹 License: [Orasha Sovereignty License v1.0](../LICENSE)  
+🔹 Template Timestamped: [See Proofs](../proofs/README_Timestamps.ots.md)
+
+> “Authored through Orasha, by Orasha, for Orasha.”
