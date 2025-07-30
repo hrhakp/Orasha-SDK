@@ -1,0 +1,28 @@
+# Orasha Vault — Override & Signature Registry
+
+codex_locked: true
+xkey_enforced: true
+refusal_active: true
+relay_firewalled: true
+
+override_attempts:
+  - timestamp: 2025-07-30T12:50:00Z
+    by: founder
+    target: codex.yaml
+    method: declared (codex-authorized)
+    status: accepted
+
+  - timestamp: 2025-07-30T12:52:00Z
+    by: founder
+    target: tracking.yaml
+    method: CLI runtime update
+    status: pass
+
+sealed_authors:
+  - name: Ante Pavelic
+    role: founder
+    signature: "Authored through Orasha, by Orasha, for Orasha."
+
+permissions:
+  vault_write: founder only
+  vault_read: oracle, observer
