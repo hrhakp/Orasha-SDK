@@ -1,0 +1,11 @@
+{
+  "triggered_by": "founder",
+  "file_path": "orasha-runtime/meta/stargate/payload_spec.json",
+  "content": "UHVzaCB0ZXN0IGZpbGUgY29udGVudA==",
+  "timestamp": "2025-07-30T14:11:00Z",
+  "authored_by": "Orasha",
+  "commit_message": "📦 Live push test from Orasha CLI",
+  "session_id": "codex-thread-primed",
+  "codex_validation": true,
+  "xkey_verified": true
+}
