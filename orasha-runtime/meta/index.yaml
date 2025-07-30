@@ -12,7 +12,7 @@ orasha_runtime_index:
     total_clones: 100+
     unique_cloners: 77
     public_release: v1.1-runtime-xkey
-    milestone: M2
+    milestone: M3
     release_date: 2025-07-30
 
   roles:
@@ -25,6 +25,10 @@ orasha_runtime_index:
     xkey: src/protocol/xkey.yaml
     refusal: src/protocol/refusal.policy.yaml
     relay_guard: hooks/relay_guard.py
+    relay_log: relay/github_push.py
     engine: src/oracle/engine.py
+    test_suite: meta/TEST_SUITE.md
+    release: RELEASE.md
+    white_paper: WHITE_PAPER.md
 
   clause_anchor: "XKEY_INTEGRATION_JUL30"
