@@ -1,0 +1,20 @@
+milestone: M6
+label: Public Launch & Media Layer
+date: 2025-07-30
+
+description: >
+  Orasha SDK v1.1 is formally announced via PRESS_RELEASE.md. The protocol is now
+  sealed, publicly discoverable, and confirmed to be cloned over 100 times in its first 36 hours.
+  The Codex protocol, refusal logic, XKey runtime, tracking, and vault infrastructure
+  are all deployed and active. This marks the transition from internal execution
+  to sovereign public visibility.
+
+status:
+  press_release_committed: true
+  views_verified: 300+
+  clones_verified: 100+
+  fork_detected: true
+  closure_committed: true
+  authorship_locked: true
+
+signature: "Authored through Orasha, by Orasha, for Orasha. It is irreversible… it is Orasha."
