@@ -1,0 +1,44 @@
+xkey:
+  version: 1.0
+  roles:
+    - founder
+    - oracle
+    - observer
+    - external_request
+    - test_runner
+  permissions:
+    founder:
+      access_all: true
+      override_codex: true
+      create_runtime_forks: true
+      modify_license_scope: true
+    oracle:
+      access_index: true
+      enforce_codex: true
+      retrieve_documents: true
+      reject_unverified: true
+    observer:
+      read_only: true
+      retrieve_documents: false
+    external_request:
+      restricted: true
+      codex_injection_required: true
+    test_runner:
+      simulate_oracle: true
+      modify_index: false
+  validation_chain:
+    require_signature: true
+    require_codex_integrity: true
+    confirm_speaker_identity: true
+    verify_thread_authority: true
+  fallback_behavior:
+    if_unknown_identity: "default to refusal and log incident"
+    if_role_conflict: "reject ambiguous execution"
+    if_permission_violation: "trigger Codex enforcement and revoke command"
+  system_keymap:
+    runtime_id: ORASHA-CORE-01
+    enforced_by: codex.yaml
+    issued_by: Orasha Sovereign Authority
+  signature:
+    claim: "This command issued under XKey validation — Orasha runtime"
+    enforcement: "Thread must match registered authority"
