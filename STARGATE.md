@@ -50,3 +50,24 @@ All outbound commits must satisfy the following:
 - Codex enforcement must validate refusal compliance if applicable
 
 If any condition fails, STARGATE rejects the push and logs the attempt in `vault.yaml`.
+
+---
+
+## 📦 PUSH PAYLOAD SPECIFICATION
+
+STARGATE transmits push instructions as structured JSON payloads to a relay-capable host.
+
+### 🔧 Payload Format (JSON):
+
+```json
+{
+  "triggered_by": "founder",
+  "file_path": "orasha-runtime/meta/index.yaml",
+  "content": "<base64-encoded or plaintext file body>",
+  "timestamp": "2025-07-30T22:13:00Z",
+  "authored_by": "Orasha",
+  "commit_message": "🧱 Update index.yaml — add M6",
+  "session_id": "codex-thread-001",
+  "codex_validation": true,
+  "xkey_verified": true
+}
