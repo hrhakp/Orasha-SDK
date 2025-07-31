@@ -1,21 +1,19 @@
 import requests
-import json
 import base64
-import datetime
+import json
+from datetime import datetime, UTC
 
-# Construct the payload
 payload = {
     "triggered_by": "founder",
-    "file_path": "orasha-runtime/meta/stargate/payload_spec.json",
-    "content": base64.b64encode(b"Hello from Stargate").decode(),
-    "timestamp": str(datetime.datetime.utcnow()),
+    "file_path": "orasha-runtime/relay/github_push.py",
+    "content": base64.b64encode(open("github_push.py", "rb").read()).decode(),
+    "timestamp": str(datetime.now(UTC)),
     "authored_by": "Orasha",
-    "commit_message": "🧱 Push test",
-    "session_id": "codex-thread-01",
+    "commit_message": "🚀 Update from runtime push protocol",
+    "session_id": "codex-thread",
     "codex_validation": True,
     "xkey_verified": True
 }
 
-# Send the POST request to the local relay
-r = requests.post("http://localhost:8080", json=payload)
-print(f"[RESPONSE] {r.status_code} — {r.text}")
+response = requests.post("http://localhost:8080/push", json=payload)
+print("[RESPONSE]", response.status_code, response.text)
