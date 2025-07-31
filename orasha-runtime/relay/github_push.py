@@ -1,33 +1,21 @@
-import json
 import requests
-from pathlib import Path
-from orasha_runtime.hooks.relay_guard import validate_payload
+import json
+import base64
+import datetime
 
-# Example relay URL (can be localhost or cloud)
-RELAY_ENDPOINT = "http://localhost:8080/push"
+# Construct the payload
+payload = {
+    "triggered_by": "founder",
+    "file_path": "orasha-runtime/meta/stargate/payload_spec.json",
+    "content": base64.b64encode(b"Hello from Stargate").decode(),
+    "timestamp": str(datetime.datetime.utcnow()),
+    "authored_by": "Orasha",
+    "commit_message": "🧱 Push test",
+    "session_id": "codex-thread-01",
+    "codex_validation": True,
+    "xkey_verified": True
+}
 
-def load_payload():
-    """Load a prepared Stargate payload from local JSON (simulated for now)."""
-    path = Path(__file__).resolve().parent / "payloads" / "pending_push.json"
-    with open(path, "r") as f:
-        return json.load(f)
-
-def push_payload(payload):
-    """Dispatch payload to relay if validated."""
-    if not validate_payload(payload):
-        print("[STARGATE] Payload rejected — Codex or XKey validation failed.")
-        return
-
-    try:
-        print(f"[STARGATE] Dispatching payload to {RELAY_ENDPOINT}...")
-        res = requests.post(RELAY_ENDPOINT, json=payload)
-        if res.status_code == 200:
-            print("[STARGATE] Push successful.")
-        else:
-            print(f"[STARGATE] Push failed with status: {res.status_code}")
-    except Exception as e:
-        print(f"[STARGATE] Exception during push: {str(e)}")
-
-if __name__ == "__main__":
-    data = load_payload()
-    push_payload(data)
+# Send the POST request to the local relay
+r = requests.post("http://localhost:8080", json=payload)
+print(f"[RESPONSE] {r.status_code} — {r.text}")
