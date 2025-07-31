@@ -3,14 +3,16 @@ import json
 
 class OrashaRelayHandler(BaseHTTPRequestHandler):
     def do_POST(self):
-        # Accept all POST requests to root or /push
+        print(f"\n🌐 POST received on path: {self.path}")
+        
+        # Accept either root (/) or /push
         if self.path not in ["/", "/push"]:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(b"Invalid endpoint.\n")
+            self.wfile.write(b"❌ Invalid endpoint.\n")
             return
 
-        content_length = int(self.headers.get("Content-Length", 0))
+        content_length = int(self.headers.get('Content-Length', 0))
         post_data = self.rfile.read(content_length)
 
         try:
@@ -18,10 +20,10 @@ class OrashaRelayHandler(BaseHTTPRequestHandler):
         except json.JSONDecodeError:
             self.send_response(400)
             self.end_headers()
-            self.wfile.write(b"Invalid JSON")
+            self.wfile.write(b"❌ Invalid JSON\n")
             return
 
-        print("\n📦 [STARGATE PAYLOAD RECEIVED]")
+        print("📦 [STARGATE PAYLOAD RECEIVED]")
         for key, value in payload.items():
             print(f"{key}: {value}")
 
@@ -33,7 +35,7 @@ class OrashaRelayHandler(BaseHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=OrashaRelayHandler, port=8080):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print(f"🚀 Orasha Relay live at http://localhost:{port}")
+    print(f"\n🚀 Orasha Relay is live at http://localhost:{port}")
     httpd.serve_forever()
 
 if __name__ == "__main__":
