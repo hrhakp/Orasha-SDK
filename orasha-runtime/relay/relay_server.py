@@ -1,8 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
-import datetime
 
-class RelayHandler(BaseHTTPRequestHandler):
+class StargateRelayHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         if self.path != "/push":
             self.send_response(404)
@@ -10,25 +9,35 @@ class RelayHandler(BaseHTTPRequestHandler):
             self.wfile.write(b"Not Found")
             return
 
-        content_length = int(self.headers['Content-Length'])
-        body = self.rfile.read(content_length)
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+
         try:
-            payload = json.loads(body)
-            timestamp = datetime.datetime.utcnow().isoformat()
-            with open("stargate_push_log.json", "a") as log:
-                log.write(json.dumps({"received_at": timestamp, "payload": payload}) + "\n")
-
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(b"STARGATE push received.\n")
-
-        except Exception as e:
+            payload = json.loads(post_data)
+        except json.JSONDecodeError:
             self.send_response(400)
             self.end_headers()
-            self.wfile.write(f"Error: {str(e)}".encode())
+            self.wfile.write(b"Invalid JSON")
+            return
+
+        print("\n🔐 [STARGATE] Payload received")
+        print(json.dumps(payload, indent=2))
+
+        # Respond
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        response = {
+            "status": "success",
+            "received": True
+        }
+        self.wfile.write(json.dumps(response).encode("utf-8"))
+
+def run(server_class=HTTPServer, handler_class=StargateRelayHandler, port=8080):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"🛰️ [STARGATE RELAY ACTIVE] Listening on http://localhost:{port}")
+    httpd.serve_forever()
 
 if __name__ == "__main__":
-    server_address = ('', 8080)
-    httpd = HTTPServer(server_address, RelayHandler)
-    print("[STARGATE] Relay server listening on http://localhost:8080/push")
-    httpd.serve_forever()
+    run()
