@@ -3,30 +3,37 @@ import json
 
 class OrashaRelayHandler(BaseHTTPRequestHandler):
     def do_POST(self):
-        if self.path == "/push":
-            content_length = int(self.headers['Content-Length'])
-            post_data = self.rfile.read(content_length)
-            try:
-                data = json.loads(post_data)
-                print("\n🔐 [RECEIVED PAYLOAD]")
-                for key, value in data.items():
-                    print(f"{key}: {value}")
-                self.send_response(200)
-                self.end_headers()
-                self.wfile.write(b"✅ Payload received and processed.\n")
-            except Exception as e:
-                self.send_response(400)
-                self.end_headers()
-                self.wfile.write(f"❌ JSON Error: {str(e)}".encode())
-        else:
+        # Accept all POST requests to root or /push
+        if self.path not in ["/", "/push"]:
             self.send_response(404)
             self.end_headers()
-            self.wfile.write(b"❌ Invalid endpoint.\n")
+            self.wfile.write(b"Invalid endpoint.\n")
+            return
 
-def run():
-    server_address = ('', 8080)
-    httpd = HTTPServer(server_address, OrashaRelayHandler)
-    print("🚀 Orasha Relay listening on port 8080...")
+        content_length = int(self.headers.get("Content-Length", 0))
+        post_data = self.rfile.read(content_length)
+
+        try:
+            payload = json.loads(post_data)
+        except json.JSONDecodeError:
+            self.send_response(400)
+            self.end_headers()
+            self.wfile.write(b"Invalid JSON")
+            return
+
+        print("\n📦 [STARGATE PAYLOAD RECEIVED]")
+        for key, value in payload.items():
+            print(f"{key}: {value}")
+
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        self.wfile.write(b"✅ Payload processed.\n")
+
+def run(server_class=HTTPServer, handler_class=OrashaRelayHandler, port=8080):
+    server_address = ('', port)
+    httpd = server_class(server_address, handler_class)
+    print(f"🚀 Orasha Relay live at http://localhost:{port}")
     httpd.serve_forever()
 
 if __name__ == "__main__":
