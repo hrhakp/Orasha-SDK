@@ -1,41 +1,29 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
-class OrashaRelayHandler(BaseHTTPRequestHandler):
+class OrashaRelay(BaseHTTPRequestHandler):
     def do_POST(self):
-        print(f"\n🌐 POST received on path: {self.path}")
-        
-        # Accept either root (/) or /push
-        if self.path not in ["/", "/push"]:
-            self.send_response(404)
-            self.end_headers()
-            self.wfile.write(b"❌ Invalid endpoint.\n")
-            return
-
-        content_length = int(self.headers.get('Content-Length', 0))
-        post_data = self.rfile.read(content_length)
+        print(f"\n🔌 Received POST on {self.path}")
+        content_length = int(self.headers.get("Content-Length", 0))
+        data = self.rfile.read(content_length)
 
         try:
-            payload = json.loads(post_data)
-        except json.JSONDecodeError:
+            payload = json.loads(data)
+            print("✅ Payload:")
+            print(json.dumps(payload, indent=2))
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"OK")
+        except Exception as e:
+            print("❌ Error:", str(e))
             self.send_response(400)
             self.end_headers()
-            self.wfile.write(b"❌ Invalid JSON\n")
-            return
+            self.wfile.write(b"Invalid JSON")
 
-        print("📦 [STARGATE PAYLOAD RECEIVED]")
-        for key, value in payload.items():
-            print(f"{key}: {value}")
-
-        self.send_response(200)
-        self.send_header("Content-Type", "application/json")
-        self.end_headers()
-        self.wfile.write(b"✅ Payload processed.\n")
-
-def run(server_class=HTTPServer, handler_class=OrashaRelayHandler, port=8080):
-    server_address = ('', port)
-    httpd = server_class(server_address, handler_class)
-    print(f"\n🚀 Orasha Relay is live at http://localhost:{port}")
+def run():
+    server_address = ('', 8080)
+    httpd = HTTPServer(server_address, OrashaRelay)
+    print("🛰️ Relay is live on http://localhost:8080")
     httpd.serve_forever()
 
 if __name__ == "__main__":
