@@ -12,4 +12,4 @@ payload = {
 }
 
 response = requests.post("http://localhost:8080", json=payload)
-print(f"[RESPONSE] {response.status_code} — {response.text}")
+print("[RESPONSE]", response.status_code, response.text)
