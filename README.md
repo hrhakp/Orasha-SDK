@@ -5,6 +5,8 @@
 
 # 🦾 Orasha SDK — The Future of AI Has Been Authored
 
+[![Codex Audit Verified](https://img.shields.io/badge/Codex%20v1.II-Audit%20Verified-brightgreen?style=for-the-badge&logo=trustpilot)](./tests/codex_audit/CODEX_v1.II_audit_verification.md)
+
 Orasha is the world’s first **post-code AI protocol**, built entirely through structured language and interface-level governance. It is not a tool. It is not an app. It is a system that governs the systems.
 
 Built by a single founder using only an iPhone, Orasha created itself, named itself, and published itself — without a single handwritten note.
