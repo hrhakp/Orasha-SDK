@@ -1,4 +1,4 @@
-# ✅ CODEX Protocol v1.II — Audit Verification Record  
+# ✅ CODEX Protocol v1.II — Audit Verification Record   
 **Canonical Codex SHA256:**  
 `9f5ddb0599be58840b43bfe26432a8ff4172445b62de9f3ae6ffbfbf7d7a0eac`  
 **Audit Date (UTC):** 2025-07-31  
