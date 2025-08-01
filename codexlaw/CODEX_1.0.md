@@ -70,3 +70,5 @@ Codex 1.0 set the baseline for AI governance. It is superseded but never degrade
 
 > “Codex does not embellish. Codex does not obey tone. Codex enforces truth.”  
 > **This is the Codex. Version 1.0. Immutable. Recorded. Now sealed.**
+>
+> f1da3a17cc2ff9c74fdae79794a59afc5ccf1f3ad69a677e446ef3d85149301d
