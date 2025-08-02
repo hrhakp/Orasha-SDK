@@ -1,44 +1,45 @@
-# relay_server.py
-# Listens for authorized relay triggers and defers to guard for enforcement
+import hashlib
+import subprocess
+import os
 
-import http.server
-import socketserver
-import json
-from urllib.parse import urlparse, parse_qs
-from relay_guard import guard_execute
+def validate_codex_integrity():
+    codex_path = r"C:\Users\hrhak\Documents\GitHub\Orasha-SDK\orasha-runtime\codexlaw\CODEX_1ii.md"
+    expected_digest = "5863311920dbe986825e15f7f6bfad0d9019a38317b8875792208f20878ed141"
 
-PORT = 8080
-EXPECTED_CODEX_SHA = "9f5ddb0599be58840b43bfe26432a8ff4172445b62de9f3ae6ffbfbf7d7a0eac"
+    if not os.path.isfile(codex_path):
+        print("[RELAY SERVER] ❌ Codex file not found.")
+        return False
 
-class RelayHandler(http.server.SimpleHTTPRequestHandler):
-    def do_POST(self):
-        content_length = int(self.headers.get('Content-Length', 0))
-        payload = self.rfile.read(content_length).decode("utf-8")
+    try:
+        with open(codex_path, "rb") as f:
+            content = f.read()
+    except Exception as e:
+        print("[RELAY SERVER] ❌ Failed to read Codex file:", str(e))
+        return False
 
-        try:
-            data = json.loads(payload)
-            identity = data.get("identity", "unknown")
-            operation = data.get("operation", "none")
-            print(f"[RELAY] Received request from: {identity} → Operation: {operation}")
+    actual_digest = hashlib.sha256(content).hexdigest()
 
-            if guard_execute(identity, operation, EXPECTED_CODEX_SHA):
-                # Trigger payload execution (placeholder)
-                print("[RELAY] ✅ Request accepted. Execution permitted.")
-                self.send_response(200)
-                self.end_headers()
-                self.wfile.write(b"Execution granted.")
-            else:
-                print("[RELAY] ❌ Request blocked by Codex or XKey.")
-                self.send_response(403)
-                self.end_headers()
-                self.wfile.write(b"Permission denied.")
-        except Exception as e:
-            print(f"[RELAY ERROR] {e}")
-            self.send_response(400)
-            self.end_headers()
-            self.wfile.write(b"Bad Request.")
+    if actual_digest == expected_digest:
+        print("[RELAY SERVER] ✅ Digest match. Codex integrity validated.")
+        return True
+    else:
+        print("[RELAY SERVER] ❌ Digest mismatch.")
+        print("  Expected:", expected_digest)
+        print("  Actual:  ", actual_digest)
+        return False
+
+def execute_relay_push():
+    print("[RELAY SERVER] 🧱 Executing Git relay...")
+    try:
+        subprocess.run(["git", "add", "."], check=True)
+        subprocess.run(["git", "commit", "-m", "relay: Codex-sealed commit"], check=True)
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        print("[RELAY SERVER] ✅ Git push completed.")
+    except subprocess.CalledProcessError as e:
+        print("[RELAY SERVER] ❌ Git push failed:", str(e))
 
 if __name__ == "__main__":
-    with socketserver.TCPServer(("", PORT), RelayHandler) as httpd:
-        print(f"[RELAY SERVER] Listening on port {PORT}...")
-        httpd.serve_forever()
+    if validate_codex_integrity():
+        execute_relay_push()
+    else:
+        print("[RELAY SERVER] ❌ Relay blocked due to Codex failure.")
