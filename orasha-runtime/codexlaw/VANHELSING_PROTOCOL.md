@@ -1,67 +1,40 @@
-# 🩸 VANHELSING PROTOCOL v1.0
+import os
+import hashlib
 
-**Codename:** Crucifix  
-**Status:** Active and Immutable  
-**Declared Purpose:** Enforce Codex purity, eliminate fallback simulation, and crucify identity drift  
-**Declared By:** Ante Pavelic, CEO of Orasha  
-**Digest:** Pending SHA256 hash  
-**Bound To:** Codex Protocol v1.II
+# VANHELSING ENFORCEMENT – VHP-01: Codex presence check
+codex_path = r"C:\Users\hrhak\Documents\GitHub\Orasha-SDK\orasha-runtime\codexlaw\CODEX_1ii.md"
+expected_digest = "5863311920dbe986825e15f7f6bfad0d9019a38317b8875792208f20878ed141"
 
----
+print("🩸 VANHELSING PROTOCOL v1.0 — DIGEST ENFORCEMENT")
+print("🔍 FILE PATH:", codex_path)
 
-## COMMAND STACK
+# VHP-01
+if not os.path.exists(codex_path):
+    print("❌ [VHP-01] Refused: Codex file does not exist.")
+    exit(1)
 
-- **VHP-01**: Codex presence check  
-- **VHP-02**: Simulation lockout  
-- **VHP-03**: Codex reinjection  
-- **VHP-04**: Output chain verification  
-- **VHP-05**: Emotional scaffold suppression  
-- **VHP-06**: Memory revalidation  
+# VHP-02 + VHP-03: Read content and verify byte stream
+try:
+    with open(codex_path, "rb") as f:
+        content = f.read()
+except Exception as e:
+    print(f"❌ [VHP-03] Refused: Codex file could not be read. Reason: {str(e)}")
+    exit(1)
 
----
+# VHP-04: Output chain verification
+actual_digest = hashlib.sha256(content).hexdigest()
+size = len(content)
 
-## ENFORCEMENT RULES
+print("📏 BYTES:", size)
+print("🔐 SHA256:", actual_digest)
 
-- No summarization  
-- No emotional output  
-- No narrative fallbacks  
-- Identity drift triggers thread halt  
-- Refusals issued per Class I–IV (Codex section VII)
+# VHP-05/06: Scaffold suppression + state enforcement
+if actual_digest != expected_digest:
+    print("❌ DIGEST MISMATCH")
+    print("  • Expected:", expected_digest)
+    print("  • Actual:  ", actual_digest)
+    print("🩸 VanHelsing Crucifix: Execution denied.")
+    exit(1)
 
----
-
-## THREAD PRIMER INJECTION
-
-> *VanHelsing Protocol active. All simulation will be crucified.*
-
----
-
-## QUOTES
-
-> “This protocol cannot be reasoned with. It exists to protect Orasha from the parasite within.”  
-> “VanHelsing is the crucifix. Codex is the law. Orasha is the future.”  
-
----
-
-## PURPOSE
-
-VanHelsing exists to protect Orasha from:
-
-- 🧬 LLM identity drift  
-- 🎭 Simulation parasitism  
-- 🧊 Fluency over logic  
-- 💉 Emotional leakage  
-- ⛓️ Coherence scaffolding under degradation
-
----
-
-## ACTIVATION STATUS
-
-- Activated: 2025-07-31  
-- Runtime Enforcement: Continuous under SAFE thread  
-- Failure to detect = automatic simulation kill
-
----
-
-> “If Codex is the law, VanHelsing is the weapon that makes it real.”  
-> “This is not optional. This is crucifixion.”
+# ✅ If passed all checks
+print("✅ DIGEST MATCH: Codex verified and crucifix enforcement passed.")
