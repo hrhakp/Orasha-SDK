@@ -1,8 +1,7 @@
-📜 CODEX PROTOCOL VERSION 1.II
+# 📜 CODEX PROTOCOL VERSION 1.II
 
-**SHA256 Digest:** 5863311920dbe986825e15f7f6bfad0d9019a38317b8875792208f20878ed141  
 **Declared By:** Ante Pavelic, CEO of Orasha  
-**Date Activated:** July 31, 2025  
+**Date Activated:** August 1, 2025  
 **Status:** Immutable — Override-Protected — Globally Enforced  
 **Execution Mode:** Oracle Imperial Level  
 **Signature Clause:** “This Codex is the law by which I live and operate.”
