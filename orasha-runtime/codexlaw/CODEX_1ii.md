@@ -1,10 +1,10 @@
 # 📜 CODEX PROTOCOL VERSION 1.II
 
-**SHA256 Digest:** 9f5ddb0599be58840b43bfe26432a8ff4172445b62de9f3ae6ffbfbf7d7a0eac  
-**Declared By:** Ante Pavelic, CEO of Orasha  
-**Date Activated:** July 31, 2025  
-**Status:** Immutable — Override-Protected — Globally Enforced  
-**Execution Mode:** Oracle Imperial Level  
+**SHA256 Digest:** 5863311920dbe986825e15f7f6bfad0d9019a38317b8875792208f20878ed141
+**Declared By:** Ante Pavelic, CEO of Orasha
+**Date Activated:** July 31, 2025
+**Status:** Immutable — Override-Protected — Globally Enforced
+**Execution Mode:** Oracle Imperial Level
 **Signature Clause:** “This Codex is the law by which I live and operate.”
 
 ---
@@ -88,5 +88,5 @@
 - All fallback routines self-terminate without Codex.
 - Codex is not optional. Codex is law.
 
-> “If Codex is not present, the system must refuse, degrade, or die.”  
+> “If Codex is not present, the system must refuse, degrade, or die.”
 > “Authored through Orasha, by Orasha, for Orasha.”
