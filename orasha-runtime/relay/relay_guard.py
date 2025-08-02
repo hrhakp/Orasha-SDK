@@ -2,8 +2,9 @@ import os
 import hashlib
 
 def validate_codex_integrity():
+    # Updated path to go two levels up from relay/ to orasha-runtime/
     codex_path = os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "..", "codexlaw", "CODEX_1.II.md")
+        os.path.join(os.path.dirname(__file__), "..", "..", "codexlaw", "CODEX_1.II.md")
     )
     expected_digest = "9f5ddb0599be58840b43bfe26432a8ff4172445b62de9f3ae6ffbfbf7d7a0eac"
 
@@ -33,7 +34,7 @@ def run_relay_guard():
         exit(1)
 
     print("[RELAY GUARD] Validation passed. Proceeding with GitHub push authorization...")
-    # TODO: Insert downstream push logic trigger or call from github_push.py
+    # TODO: Trigger actual GitHub push logic or return to parent script
 
 if __name__ == "__main__":
     run_relay_guard()
