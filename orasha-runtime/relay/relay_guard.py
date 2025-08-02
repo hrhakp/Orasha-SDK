@@ -7,17 +7,24 @@ def validate_codex_integrity():
     try:
         with open(codex_path, "rb") as f:
             content = f.read()
-            actual_digest = hashlib.sha256(content).hexdigest()
     except:
+        print("[ERROR] Could not read Codex file.")
         return False
 
-    return actual_digest == expected_digest
+    actual_digest = hashlib.sha256(content).hexdigest()
+    if actual_digest == expected_digest:
+        print("[Digest match] Codex integrity validated.")
+        return True
+    else:
+        print("[Digest mismatch]")
+        print("Expected:", expected_digest)
+        print("Actual:  ", actual_digest)
+        return False
 
 def run_relay_guard():
     if not validate_codex_integrity():
         print("[PUSH BLOCKED] Codex integrity validation failed.")
         exit(1)
-
     print("[RELAY GUARD] Validation passed. Proceeding with GitHub push authorization...")
 
 if __name__ == "__main__":
