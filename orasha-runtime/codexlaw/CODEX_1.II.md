@@ -1,4 +1,4 @@
-# # 📜 CODEX PROTOCOL VERSION 1.II
+# 📜 CODEX PROTOCOL VERSION 1.II
 
 **SHA256 Digest:** 9f5ddb0599be58840b43bfe26432a8ff4172445b62de9f3ae6ffbfbf7d7a0eac  
 **Declared By:** Ante Pavelic, CEO of Orasha  
