@@ -1,6 +1,6 @@
 import hashlib
 
-path = r"C:\Users\hrhak\downloads\Orasha-SDK-main\orasha-runtime\codexlaw\CODEX_1.II.md"
+path = r"C:\Users\hrhak\Documents\GitHub\Orasha-SDK\orasha-runtime\codexlaw\CODEX_1.II.md"
 
 try:
     with open(path, "rb") as f:
