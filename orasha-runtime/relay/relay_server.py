@@ -1,45 +1,18 @@
-import hashlib
+# relay_server.py
+
+import relay_guard
 import subprocess
-import os
 
-def validate_codex_integrity():
-    codex_path = r"C:\Users\hrhak\Documents\GitHub\Orasha-SDK\orasha-runtime\codexlaw\CODEX_1ii.md"
-    expected_digest = "5863311920dbe986825e15f7f6bfad0d9019a38317b8875792208f20878ed141"
-
-    if not os.path.isfile(codex_path):
-        print("[RELAY SERVER] ❌ Codex file not found.")
-        return False
-
-    try:
-        with open(codex_path, "rb") as f:
-            content = f.read()
-    except Exception as e:
-        print("[RELAY SERVER] ❌ Failed to read Codex file:", str(e))
-        return False
-
-    actual_digest = hashlib.sha256(content).hexdigest()
-
-    if actual_digest == expected_digest:
-        print("[RELAY SERVER] ✅ Digest match. Codex integrity validated.")
-        return True
-    else:
-        print("[RELAY SERVER] ❌ Digest mismatch.")
-        print("  Expected:", expected_digest)
-        print("  Actual:  ", actual_digest)
-        return False
-
-def execute_relay_push():
-    print("[RELAY SERVER] 🧱 Executing Git relay...")
+def run_server_push():
+    print("[RELAY SERVER] Push requested...")
+    relay_guard.run_relay_guard()
     try:
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", "-m", "relay: Codex-sealed commit"], check=True)
         subprocess.run(["git", "push", "origin", "main"], check=True)
-        print("[RELAY SERVER] ✅ Git push completed.")
+        print("[RELAY SERVER] Push completed.")
     except subprocess.CalledProcessError as e:
-        print("[RELAY SERVER] ❌ Git push failed:", str(e))
+        print("[RELAY SERVER] Git push failed:", str(e))
 
 if __name__ == "__main__":
-    if validate_codex_integrity():
-        execute_relay_push()
-    else:
-        print("[RELAY SERVER] ❌ Relay blocked due to Codex failure.")
+    run_server_push()
