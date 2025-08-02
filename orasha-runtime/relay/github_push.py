@@ -1,4 +1,5 @@
 import subprocess
+import relay_guard
 import hashlib
 import os
 
